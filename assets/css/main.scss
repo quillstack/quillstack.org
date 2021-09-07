@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/wgc7dwu.css");
+
 @font-face {
     font-family: "verdigris-mvb-pro-big";
     src: url("@/assets/fonts/verdigris-mvb-pro-big.woff2") format("woff2"),
@@ -11,12 +13,39 @@
 body {
     @apply bg-gray-900 text-gray-200;
 
-    .logo {
+    main {
+        @apply mx-auto xl:w-1/2 lg:w-1/2 md:w-2/3;
+    }
+
+    h1 {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-3xl font-thin;
+        @apply text-black text-2xl mb-5 pt-2 pb-1 px-6 bg-gray-600 md:rounded md:inline-block border-b border-black text-center md:text-left;
+    }
+
+    .logo {
+        @apply flex py-6 px-5 bg-black md:mb-4 md:rounded-b;
+    }
+
+    .quillstack {
+        font-family: verdigris-mvb-pro-big, serif;
+        @apply text-3xl font-thin pt-1 pl-2;
     }
 
     p {
-        @apply text-gray-400;
+        @apply text-gray-400 text-lg pl-4 pr-2 md:px-0;
+        font-family: proxima-nova,sans-serif;
+
+        a {
+            @apply border-b border-dashed;
+        }
+    }
+
+    li {
+        @apply text-gray-400 text-lg;
+        font-family: proxima-nova,sans-serif;
+
+        a {
+            @apply border-b border-dashed;
+        }
     }
 }

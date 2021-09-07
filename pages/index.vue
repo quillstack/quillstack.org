@@ -1,15 +1,22 @@
 <template>
-    <div class="p-10 mx-auto xl:w-13 lg:w-1/2 md:w-2/3">
-        <a href="/" class="flex mb-8">
+    <main>
+        <a href="/" class="logo">
             <img src="@/static/favicon.svg" class="w-[40px] block" width="40px">
-            <div class="logo pt-1 pl-2">Quillstack</div>
+            <div class="quillstack">Quillstack</div>
         </a>
+
+        <h1>
+            The API Framework
+        </h1>
 
         <p>
             Quillstack is a group of components you can use separately or combine them into the framework.
             The main goal was to create the packages which will be fast and simple without any magic features.
         </p>
-    </div>
+        <ul class="list-disc mt-5 px-10">
+            <li><a href="/di">Dependency Injection Container</a></li>
+        </ul>
+    </main>
 </template>
 
 <script>
