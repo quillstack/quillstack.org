@@ -13,8 +13,16 @@
 body {
     @apply bg-gray-900 text-gray-200;
 
-    main {
+    .center {
         @apply mx-auto xl:w-1/2 lg:w-1/2 md:w-2/3;
+
+        a {
+            @apply border-b border-dashed text-blue-300;
+
+            &:hover {
+                @apply border-solid border-blue-400;
+            }
+        }
     }
 
     h1 {
@@ -23,7 +31,7 @@ body {
     }
 
     .logo {
-        @apply flex py-6 px-5 bg-black md:mb-4 md:rounded-b;
+        @apply flex py-6 px-5 bg-black md:mb-4;
     }
 
     .quillstack {
@@ -34,18 +42,10 @@ body {
     p {
         @apply text-gray-400 text-lg pl-4 pr-2 md:px-0;
         font-family: proxima-nova,sans-serif;
-
-        a {
-            @apply border-b border-dashed;
-        }
     }
 
     li {
         @apply text-gray-400 text-lg;
         font-family: proxima-nova,sans-serif;
-
-        a {
-            @apply border-b border-dashed;
-        }
     }
 }
