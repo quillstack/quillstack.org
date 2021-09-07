@@ -9,10 +9,14 @@
 }
 
 body {
-    @apply bg-gray-900;
+    @apply bg-gray-900 text-gray-200;
 
     .logo {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-gray-200 text-3xl font-thin;
+        @apply text-3xl font-thin;
+    }
+
+    p {
+        @apply text-gray-400;
     }
 }

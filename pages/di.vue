@@ -5,9 +5,11 @@
             <div class="logo pt-1 pl-2">Quillstack</div>
         </a>
 
+        <h1>Dependency Injection Container</h1>
+
         <p>
-            Quillstack is a group of components you can use separately or combine them into the framework.
-            The main goal was to create the packages which will be fast and simple without any magic features.
+            QuillStack DI is the dependency injection container based on PSR-11: Container interface. The library
+            was built with the main goal: to be fast!
         </p>
     </div>
 </template>
