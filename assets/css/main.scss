@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "verdigris-mvb-pro-big";
+    src: url("@/assets/fonts/verdigris-mvb-pro-big.woff2") format("woff2"),
+    url("@/assets/fonts/verdigris-mvb-pro-big.woff") format("woff"),
+    url("@/assets/fonts/verdigris-mvb-pro-big.otf") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+}
+
 body {
     @apply bg-gray-900;
+
+    .logo {
+        font-family: verdigris-mvb-pro-big, serif;
+        @apply text-gray-200 text-3xl font-thin;
+    }
 }
