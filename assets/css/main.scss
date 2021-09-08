@@ -1,4 +1,22 @@
-@import url("https://use.typekit.net/wgc7dwu.css");
+@font-face {
+    font-family: "proxima-nova";
+    src: url("@/assets/fonts/proxima-nova-normal-700.woff2") format("woff2"),
+    url("@/assets/fonts/proxima-nova-normal-700.woff") format("woff"),
+    url("@/assets/fonts/proxima-nova-normal-700.otf") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight:700;
+}
+
+@font-face {
+    font-family: "proxima-nova";
+    src: url("@/assets/fonts/proxima-nova-normal-400.woff2") format("woff2"),
+    url("@/assets/fonts/proxima-nova-normal-400.woff") format("woff"),
+    url("@/assets/fonts/proxima-nova-normal-400.otf") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+}
 
 @font-face {
     font-family: "verdigris-mvb-pro-big";
