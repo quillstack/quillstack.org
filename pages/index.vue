@@ -6,7 +6,7 @@
                 The API Framework
             </h1>
 
-            <p>
+            <p class="before-code">
                 Quillstack is a group of components you can use separately or combine them into the framework.
                 The main goal was to create the packages which will be fast and simple without any magic features.
             </p>

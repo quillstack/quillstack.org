@@ -6,7 +6,7 @@
                 Dependency Injection Container
             </h1>
 
-            <p>
+            <p class="before-code">
                 QuillStack DI is the dependency injection container based on PSR-11: Container interface. The library
                 was built with the main goal: to be fast!
             </p>
@@ -52,6 +52,9 @@
                 Of course our example is very simple. Life brings us more difficult problems to solve.
             </p>
 
+        </div>
+        <hr/>
+        <div class="center">
             <h2>
                 The Repository-Service Pattern
             </h2>

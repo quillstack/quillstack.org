@@ -28,6 +28,14 @@
     font-weight: 400;
 }
 
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("@/assets/fonts/SourceCodePro-Regular.woff2") format("woff2"),
+    url("@/assets/fonts/SourceCodePro-Regular.woff") format("woff"),
+    url("@/assets/fonts/SourceCodePro-Regular.otf") format("opentype");
+    font-display: swap;
+}
+
 body {
     @apply bg-gray-900 text-gray-200 pb-20;
 
@@ -45,7 +53,7 @@ body {
 
     h1 {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-black text-2xl mb-5 pt-2 pb-1 px-6 bg-gray-600 md:rounded md:inline-block border-b border-black text-center md:text-left;
+        @apply text-black text-3xl mb-5 pt-2 pb-1 px-6 bg-gray-600 md:rounded md:inline-block border-b border-black text-center md:text-left;
     }
 
     h2 {
@@ -54,12 +62,16 @@ body {
     }
 
     .logo {
-        @apply flex py-6 px-5 bg-black md:mb-4;
+        @apply flex py-6 px-5 bg-black md:mb-6 md:shadow-lg md:border-b md:border-gray-800;
     }
 
     .quillstack {
         font-family: verdigris-mvb-pro-big, serif;
         @apply text-3xl font-thin pt-1 pl-2;
+    }
+
+    hr {
+        @apply border-dashed mt-6 mb-4 border-gray-600;
     }
 
     p {
