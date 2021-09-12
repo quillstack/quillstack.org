@@ -53,12 +53,17 @@ body {
 
     h1 {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-black text-3xl mb-5 pt-2 pb-1 px-6 bg-gray-600 md:rounded md:inline-block border-b border-black text-center md:text-left;
+        @apply text-black text-4xl mb-5 pt-2 pb-1 px-6 bg-gray-600 md:rounded md:inline-block border-b border-black text-center md:text-left;
     }
 
     h2 {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-2xl mb-2 pt-8 pb-1 px-4 md:px-0;
+        @apply text-4xl mb-2 pt-8 pb-1 px-4 md:px-0;
+    }
+
+    h3 {
+        font-family: verdigris-mvb-pro-big, serif;
+        @apply text-gray-400 text-3xl mb-2 pt-10 pb-1 px-4 md:px-0;
     }
 
     .logo {
@@ -90,9 +95,11 @@ body {
 
     .toc {
         @apply my-5 p-5 bg-gray-800 md:rounded border-gray-700 border-dashed md:border border-t border-b;
+    }
 
+    div.list {
         ul {
-            @apply list-decimal px-4;
+            @apply list-decimal px-4 pl-8 md:pl-4;
 
             li {
                 @apply px-2;
@@ -100,7 +107,7 @@ body {
         }
 
         ol {
-            @apply list-disc px-4;
+            @apply list-disc px-4 pl-8 md:pl-4;
 
             li {
                 @apply px-2;

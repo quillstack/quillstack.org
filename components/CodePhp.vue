@@ -19,6 +19,10 @@ export default {
         lines: {
             type: Array,
             required: true
+        },
+        noColors: {
+            type: Boolean,
+            default: false
         }
     },
     data() {
@@ -224,6 +228,10 @@ export default {
     },
     computed: {
         getLines() {
+            if (this.noColors) {
+                return this.lines;
+            }
+
             return this.lines
                 .map(line => this.markClassNameStatic(line))
                 .map(line => this.markClassNames(line))
