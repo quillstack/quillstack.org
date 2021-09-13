@@ -29,6 +29,7 @@
                             <li>Simple usage</li>
                             <li>Dependencies based on interfaces</li>
                             <li>Dependencies with parameters</li>
+                            <li>Dependencies as objects</li>
                         </ol>
                     </li>
                 </ul>
@@ -125,19 +126,24 @@
             </p>
         </div>
         <code-php :no-colors="true" :lines="composer"/>
-        <div class="center list">
+        <div class="center">
             <p>
                 The package will be ready to use after that.
             </p>
+        </div>
+        <hr/>
+        <div class="center">
             <h2>Usage</h2>
             <p>
                 You can use QuillStack DI when you want:
             </p>
-            <ol>
-                <li>To have a simple and fast DI container.</li>
-                <li>To define dependencies based on interfaces.</li>
-                <li>Define parameters e.g. credentials for a database in Database class.</li>
-            </ol>
+            <div class="list">
+                <ol>
+                    <li>To have a simple and fast DI container.</li>
+                    <li>To define dependencies based on interfaces.</li>
+                    <li>Define parameters e.g. credentials for a database in Database class.</li>
+                </ol>
+            </div>
             <h3>Simple usage</h3>
             <p class="before-code">
                 You can easily start using a DI Container:
@@ -171,15 +177,41 @@
                 keep your code open to changes of this implementation in the future. If you decide to do that,
                 you'll have to change just one line.
             </p>
+            <h3>
+                Dependencies with parameters
+            </h3>
+            <p class="before-code">
+                If some of your classes require parameters, define them as an array passed on the second
+                parameter to the container:
+            </p>
         </div>
+        <code-php :lines="parameters"/>
+        <div class="center">
+            <p>
+                Of course you can take the value of the hostname from the configuration files.
+            </p>
+        </div>
+        <div class="center">
+            <h3>
+                Dependencies as objects
+            </h3>
+            <p class="before-code">
+                In this example whenever new class of LoggerInterface will be required as a dependency, a previously
+                defined object will be used. This object can be created once in a bootstrap file, and used in the
+                entire application:
+            </p>
+        </div>
+        <code-php :lines="objects"/>
+        <page-footer/>
     </main>
 </template>
 
 <script>
 import Logo from "../components/Logo";
 import CodePhp from "../components/CodePhp";
+import PageFooter from "../components/PageFooter";
 export default {
-    components: {CodePhp, Logo},
+    components: {PageFooter, CodePhp, Logo},
     data() {
         return {
             newDog: [
@@ -230,6 +262,15 @@ export default {
                 "    Database::class => [",
                 "        'hostname' => 'localhost',",
                 "    ],",
+                "]);"
+            ],
+            objects: [
+                "$handler = new StreamHandler('var/app.log');",
+                "$logger = new Logger('name');",
+                "$logger->pushHandler($handler);",
+                "",
+                "$container = new Container([",
+                "    LoggerInterface::class => $logger,",
                 "]);"
             ]
         }

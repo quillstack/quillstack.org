@@ -14,12 +14,14 @@
                 <li><a href="/di/">Dependency Injection Container</a></li>
             </ul>
         </div>
+        <page-footer/>
     </main>
 </template>
 
 <script>
 import Logo from "../components/Logo";
+import PageFooter from "../components/PageFooter";
 export default {
-    components: {Logo}
+    components: {PageFooter, Logo}
 }
 </script>

@@ -37,7 +37,11 @@
 }
 
 body {
-    @apply bg-gray-900 text-gray-200 pb-20;
+    @apply bg-black text-gray-200;
+
+    main {
+        @apply bg-gray-900;
+    }
 
     .center {
         @apply mx-auto xl:w-1/2 lg:w-1/2 md:w-2/3;
@@ -53,12 +57,12 @@ body {
 
     h1 {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-black text-4xl mb-5 pt-2 pb-1 px-6 bg-gray-600 md:rounded md:inline-block border-b border-black text-center md:text-left;
+        @apply text-black text-3xl mb-5 pt-4 md:pt-2 pb-3 md:pb-1 px-6 bg-gray-700 md:bg-gray-600 md:rounded md:inline-block border-b border-black text-center md:text-left;
     }
 
     h2 {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-4xl mb-2 pt-8 pb-1 px-4 md:px-0;
+        @apply text-gray-300 text-4xl mb-2 pt-8 pb-1 px-4 md:px-0;
     }
 
     h3 {
@@ -66,13 +70,17 @@ body {
         @apply text-gray-400 text-3xl mb-2 pt-10 pb-1 px-4 md:px-0;
     }
 
+    footer {
+        @apply bg-black border-t border-gray-800 mt-20 text-center text-gray-600 py-6;
+    }
+
     .logo {
-        @apply flex py-6 px-5 bg-black md:mb-6 md:shadow-lg md:border-b md:border-gray-800;
+        @apply flex py-3 px-5 bg-black md:mb-6 md:shadow-lg md:border-b md:border-gray-800;
     }
 
     .quillstack {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-3xl font-thin pt-1 pl-2;
+        @apply text-2xl font-thin pt-1 pl-2 text-gray-400;
     }
 
     hr {
@@ -99,7 +107,7 @@ body {
 
     div.list {
         ul {
-            @apply list-decimal px-4 pl-8 md:pl-4;
+            @apply list-decimal px-4 pl-4;
 
             li {
                 @apply px-2;
@@ -107,11 +115,17 @@ body {
         }
 
         ol {
-            @apply list-disc px-4 pl-8 md:pl-4;
+            @apply list-disc px-4 pl-4;
 
             li {
                 @apply px-2;
             }
+        }
+    }
+
+    div.center {
+        div.list {
+            @apply pl-6;
         }
     }
 
