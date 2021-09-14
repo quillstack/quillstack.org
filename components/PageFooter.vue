@@ -1,7 +1,8 @@
 <template>
     <footer>
         <a href="/">
-            © 2021 <em>Quillstack</em>
+            &copy; 2021 <em>Quillstack</em><br>
+            Photo by <a href="https://unsplash.com/@hosseiin" target="_blank">Hossein Hosseini</a>
         </a>
     </footer>
 </template>
