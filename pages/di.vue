@@ -263,6 +263,9 @@ import CodePhp from "../components/CodePhp";
 import PageFooter from "../components/PageFooter";
 export default {
     components: {PageFooter, CodePhp, Logo},
+    head: {
+        title: 'Dependency Injection - Quillstack'
+    },
     data() {
         return {
             newDog: [
