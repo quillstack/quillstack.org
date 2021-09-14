@@ -19,7 +19,7 @@
             <div class="toc list">
                 <ul>
                     <li>
-                        <a href="/di/">Dependency Injection Container</a>
+                        <nuxt-link to="/di/">Dependency Injection Container</nuxt-link>
                     </li>
                 </ul>
             </div>

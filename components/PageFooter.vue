@@ -1,8 +1,8 @@
 <template>
     <footer>
-        <a href="/">
+        <nuxt-link to="/">
             &copy; 2021 <em>Quillstack</em>
-        </a>
+        </nuxt-link>
 
         <div v-if="photoByUrl">
             Photo by <a :href="photoByUrl" target="_blank">{{ photoByName }}</a>
