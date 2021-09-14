@@ -1,16 +1,21 @@
 <template>
     <main>
         <logo/>
+        <div class="bg-image-di hero">
+            <div class="center">
+                <h1>
+                    Dependency Injection Container
+                </h1>
+
+                <div class="intro">
+                    <p>
+                        QuillStack DI is the dependency injection container based on PSR-11: Container interface. The library
+                        was built with the main goal: to be fast!
+                    </p>
+                </div>
+            </div>
+        </div>
         <div class="center">
-            <h1>
-                Dependency Injection Container
-            </h1>
-
-            <p class="before-code">
-                QuillStack DI is the dependency injection container based on PSR-11: Container interface. The library
-                was built with the main goal: to be fast!
-            </p>
-
             <div class="toc list">
                 <ul>
                     <li>
@@ -34,7 +39,8 @@
                     </li>
                 </ul>
             </div>
-
+        </div>
+        <div class="center">
             <h2>
                 What is the DI Container?
             </h2>

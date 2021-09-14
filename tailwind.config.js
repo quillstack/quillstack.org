@@ -7,7 +7,11 @@ module.exports = {
     ],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'image-di': "url('@/assets/images/di.jpg')"
+            }
+        },
     },
     variants: {
         extend: {},

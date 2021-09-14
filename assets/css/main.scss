@@ -75,12 +75,21 @@ body {
     }
 
     .logo {
-        @apply flex py-3 px-5 bg-black md:mb-6 md:shadow-lg md:border-b md:border-gray-800;
+        @apply flex py-3 px-5 bg-black md:shadow-lg md:border-b md:border-gray-800;
     }
 
     .quillstack {
         font-family: verdigris-mvb-pro-big, serif;
         @apply text-2xl font-thin pt-1 pl-2 text-gray-400;
+    }
+
+    .intro {
+        background: rgba(0, 0, 0, 0.5);
+        @apply md:rounded pt-4 px-4 shadow border-t border-b md:border border-gray-900;
+
+        p {
+            @apply text-gray-400;
+        }
     }
 
     hr {
@@ -102,7 +111,7 @@ body {
     }
 
     .toc {
-        @apply my-5 p-5 bg-gray-800 md:rounded border-gray-700 border-dashed md:border border-t border-b;
+        @apply md:mt-5 mb-5 p-5 bg-gray-800 md:rounded border-gray-700 border-dashed md:border border-t border-b;
     }
 
     div.list {
@@ -169,5 +178,9 @@ body {
 
     div.code ul span.method {
         color: #f7c548;
+    }
+
+    div.hero {
+        @apply md:pt-10 pb-10 h-auto bg-cover bg-center shadow md:mb-4 md:border-b md:border-gray-800;
     }
 }
