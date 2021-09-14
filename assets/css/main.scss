@@ -52,6 +52,15 @@ body {
             &:hover {
                 @apply border-solid border-blue-400;
             }
+
+            &.anchor {
+                font-family: proxima-nova,sans-serif;
+                @apply text-gray-500;
+
+                &:hover {
+                    @apply border-solid border-gray-400;
+                }
+            }
         }
     }
 

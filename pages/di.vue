@@ -3,7 +3,7 @@
         <logo/>
         <div class="bg-image-di hero">
             <div class="center">
-                <h1>
+                <h1 class="bg-pink-900">
                     Dependency Injection Container
                 </h1>
 
@@ -19,30 +19,61 @@
             <div class="toc list">
                 <ul>
                     <li>
-                        What is a DI Container?
+                        <a href="#" v-scroll-to="'#what-is-a-di-container'">
+                            What is a DI Container?
+                        </a>
                         <ol>
-                            <li>The Repository-Service Pattern</li>
-                            <li>MVC Pattern</li>
+                            <li>
+                                <a href="#" v-scroll-to="'#repository-service-pattern'">
+                                    The Repository-Service Pattern
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" v-scroll-to="'#mvc-pattern'">
+                                    MVC Pattern
+                                </a>
+                            </li>
                         </ol>
                     </li>
                     <li>
-                        Installation
+                        <a href="#" v-scroll-to="'#installation'">
+                            Installation
+                        </a>
                     </li>
                     <li>
-                        Usage
+                        <a href="#" v-scroll-to="'#usage'">
+                            Usage
+                        </a>
                         <ol>
-                            <li>Simple usage</li>
-                            <li>Dependencies based on interfaces</li>
-                            <li>Dependencies with parameters</li>
-                            <li>Dependencies as objects</li>
+                            <li>
+                                <a href="#" v-scroll-to="'#simple-usage'">
+                                    Simple usage
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" v-scroll-to="'#dependencies-based-on-interfaces'">
+                                    Dependencies based on interfaces
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" v-scroll-to="'#dependencies-with-parameters'">
+                                    Dependencies with parameters
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" v-scroll-to="'#dependencies-as-objects'">
+                                    Dependencies as objects
+                                </a>
+                            </li>
                         </ol>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="center">
-            <h2>
+            <h2 id="what-is-a-di-container">
                 What is the DI Container?
+                <a class="anchor" href="#" v-scroll-to="'#what-is-a-di-container'">¶</a>
             </h2>
             <p class="before-code">
                 Every time you need a create a new instance of some class, you use the keyword <em>new</em>, like here:
@@ -62,8 +93,9 @@
         </div>
         <hr/>
         <div class="center">
-            <h2>
+            <h2 id="repository-service-pattern">
                 The Repository-Service Pattern
+                <a class="anchor" href="#" v-scroll-to="'#repository-service-pattern'">¶</a>
             </h2>
 
             <p>
@@ -104,8 +136,9 @@
         </div>
         <hr/>
         <div class="center">
-            <h2>
+            <h2 id="mvc-pattern">
                 MVC Pattern
+                <a class="anchor" href="#" v-scroll-to="'#mvc-pattern'">¶</a>
             </h2>
             <p class="before-code">
                 Containers are often used in MVC frameworks. The first initialized class is a Controller,
@@ -126,7 +159,10 @@
         </div>
         <hr/>
         <div class="center">
-            <h2>Installation</h2>
+            <h2 id="installation">
+                Installation
+                <a class="anchor" href="#" v-scroll-to="'#installation'">¶</a>
+            </h2>
             <p class="before-code">
                 To install this package, run the standard command using Composer:
             </p>
@@ -139,9 +175,12 @@
         </div>
         <hr/>
         <div class="center">
-            <h2>Usage</h2>
+            <h2 id="usage">
+                Usage
+                <a class="anchor" href="#" v-scroll-to="'#usage'">¶</a>
+            </h2>
             <p>
-                You can use QuillStack DI when you want:
+                You can use Quillstack DI when you want:
             </p>
             <div class="list">
                 <ol>
@@ -150,7 +189,10 @@
                     <li>Define parameters e.g. credentials for a database in Database class.</li>
                 </ol>
             </div>
-            <h3>Simple usage</h3>
+            <h3 id="simple-usage">
+                Simple usage
+                <a class="anchor" href="#" v-scroll-to="'#simple-usage'">¶</a>
+            </h3>
             <p class="before-code">
                 You can easily start using a DI Container:
             </p>
@@ -161,8 +203,9 @@
                 This code creates an instance of the container class. The container creates every class
                 with get method, in our case it will be ExampleController.
             </p>
-            <h3>
+            <h3 id="dependencies-based-on-interfaces">
                 Dependencies based on interfaces
+                <a class="anchor" href="#" v-scroll-to="'#dependencies-based-on-interfaces'">¶</a>
             </h3>
             <p class="before-code">
                 If you want to define which class should be loaded based on an interface, you can easily do that:
@@ -183,8 +226,9 @@
                 keep your code open to changes of this implementation in the future. If you decide to do that,
                 you'll have to change just one line.
             </p>
-            <h3>
+            <h3 id="dependencies-with-parameters">
                 Dependencies with parameters
+                <a class="anchor" href="#" v-scroll-to="'#dependencies-with-parameters'">¶</a>
             </h3>
             <p class="before-code">
                 If some of your classes require parameters, define them as an array passed on the second
@@ -198,8 +242,9 @@
             </p>
         </div>
         <div class="center">
-            <h3>
+            <h3 id="dependencies-as-objects">
                 Dependencies as objects
+                <a class="anchor" href="#" v-scroll-to="'#dependencies-as-objects'">¶</a>
             </h3>
             <p class="before-code">
                 In this example whenever new class of LoggerInterface will be required as a dependency, a previously
@@ -208,7 +253,7 @@
             </p>
         </div>
         <code-php :lines="objects"/>
-        <page-footer/>
+        <page-footer photo-by-name="Hossein Hosseini" photo-by-url="https://unsplash.com/@hosseiin"/>
     </main>
 </template>
 
@@ -251,7 +296,7 @@ export default {
             simpleUsage: [
                 "<?php",
                 "    ",
-                "use QuillStack\\DI\\Container;",
+                "use Quillstack\\DI\\Container;",
                 "    ",
                 "require __DIR__ . '/../vendor/autoload.php';",
                 "    ",

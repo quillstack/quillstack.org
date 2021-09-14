@@ -9,7 +9,8 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'image-di': "url('@/assets/images/di.jpg')"
+                'image-di': "url('@/assets/images/di.jpg')",
+                'image-index': "url('@/assets/images/index.jpg')"
             }
         },
     },

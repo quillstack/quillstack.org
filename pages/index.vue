@@ -1,9 +1,9 @@
 <template>
     <main>
         <logo/>
-        <div class="bg-image-di hero">
+        <div class="bg-image-index hero">
             <div class="center">
-                <h1>
+                <h1 class="bg-green-800">
                     The API Framework
                 </h1>
 
@@ -24,7 +24,7 @@
                 </ul>
             </div>
         </div>
-        <page-footer/>
+        <page-footer photo-by-url="https://unsplash.com/@sseeker" photo-by-name="Stormseeker"/>
     </main>
 </template>
 
