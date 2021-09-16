@@ -20,9 +20,9 @@ export default {
             type: Array,
             required: true
         },
-        noColors: {
+        colors: {
             type: Boolean,
-            default: false
+            default: true
         }
     },
     data() {
@@ -41,6 +41,8 @@ export default {
                 'require',
                 '<?php',
                 'use',
+                'if',
+                'echo',
             ],
             const: [
                 '__DIR__',
@@ -228,7 +230,7 @@ export default {
     },
     computed: {
         getLines() {
-            if (this.noColors) {
+            if (!this.colors) {
                 return this.lines;
             }
 

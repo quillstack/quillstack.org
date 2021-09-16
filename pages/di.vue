@@ -165,10 +165,10 @@
                 <a class="anchor" href="#" v-scroll-to="'#installation'">¶</a>
             </h2>
             <p class="before-code">
-                To install this package, run the standard command using Composer:
+                To install this package, run the standard command using <em>Composer</em>:
             </p>
         </div>
-        <code-php :no-colors="true" :lines="composer"/>
+        <code-php :colors="false" :lines="composer"/>
         <div class="center">
             <p>
                 The package will be ready to use after that.

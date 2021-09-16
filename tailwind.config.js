@@ -10,7 +10,8 @@ module.exports = {
         extend: {
             backgroundImage: {
                 'image-di': "url('@/assets/images/di.jpg')",
-                'image-index': "url('@/assets/images/index.jpg')"
+                'image-index': "url('@/assets/images/index.jpg')",
+                'image-dotenv': "url('@/assets/images/dotenv.jpg')"
             }
         },
     },
