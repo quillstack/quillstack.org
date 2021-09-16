@@ -11,7 +11,7 @@
                     <p>
                         Quillstack DI is the dependency injection container based on PSR-11: Container interface. The library
                         was built with the main goal: to be fast!
-                        <span id="scroll-top"></span>
+                        <span id="toc"></span>
                     </p>
                 </div>
             </div>

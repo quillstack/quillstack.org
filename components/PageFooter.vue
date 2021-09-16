@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <a href="#" :class="scrollToClass" class="transition duration-500 ease-in-out shadow border text-2xl border-green-700 flex flex-wrap content-center bg-green-800 rounded-full fixed bottom-10 right-10 w-12 h-12 text-center text-white" v-scroll-to="'#scroll-top'">
+        <a href="#" :class="scrollToClass" class="transition duration-500 ease-in-out shadow border text-2xl border-green-700 flex flex-wrap content-center bg-green-800 rounded-full fixed bottom-10 right-10 w-12 h-12 text-center text-white" v-scroll-to="'#toc'">
             <div class="mx-auto mb-1 text-green-300">&#8593;</div>
         </a>
 

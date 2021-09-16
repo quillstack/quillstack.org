@@ -11,7 +11,7 @@
                     <p>
                         Quillstack is a group of components you can use separately or combine them into the framework.
                         The main goal was to create the packages which will be fast and simple without any magic features.
-                        <span id="scroll-top"></span>
+                        <span id="toc"></span>
                     </p>
                 </div>
             </div>
