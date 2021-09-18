@@ -1,9 +1,9 @@
 <template>
     <main>
         <logo/>
-        <div class="bg-image-dotenv hero bg-top md:bg-center">
+        <div class="dark:bg-image-dark-dotenv bg-image-dotenv hero bg-top md:bg-center">
             <div class="center">
-                <h1 class="bg-yellow-800">
+                <h1 class="dark:bg-yellow-800 bg-green-300">
                     Dotenv
                 </h1>
 
@@ -132,7 +132,7 @@
         </div>
         <code-php :colors="false" :lines="multiLine"/>
 
-        <page-footer photo-by-name="Claire Brear" photo-by-url="https://unsplash.com/@_bearista1"/>
+        <page-footer :photo-by-name="photoName" :photo-by-url="photoUrl"/>
     </main>
 </template>
 
@@ -146,8 +146,19 @@ export default {
         return {
             title: 'Dotenv - Quillstack',
             htmlAttrs: {
-                class: this.$store.state.mode.dark ? 'dark' : ''
+                class: this.darkMode ? 'dark' : ''
             }
+        }
+    },
+    computed: {
+        darkMode () {
+            return this.$store.state.mode.dark;
+        },
+        photoUrl () {
+            return this.darkMode ? "https://unsplash.com/@_bearista1" : "https://unsplash.com/@zhenhu2424";
+        },
+        photoName () {
+            return this.darkMode ? "Claire Brear" : "Zhen Hu";
         }
     },
     data() {

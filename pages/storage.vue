@@ -1,7 +1,7 @@
 <template>
     <main>
         <logo/>
-        <div class="bg-image-storage hero bg-center">
+        <div class="dark:bg-image-dark-storage bg-image-storage hero bg-center">
             <div class="center">
                 <h1 class="bg-yellow-500">
                     Storage

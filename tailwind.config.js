@@ -18,7 +18,9 @@ module.exports = {
                 'image-index': "url('@/assets/images/index.jpg')",
                 'image-dark-index': "url('@/assets/images/dark-index.jpg')",
                 'image-dotenv': "url('@/assets/images/dotenv.jpg')",
+                'image-dark-dotenv': "url('@/assets/images/dark-dotenv.jpg')",
                 'image-storage': "url('@/assets/images/storage.jpg')",
+                'image-dark-storage': "url('@/assets/images/dark-storage.jpg')",
                 'image-logo': "url('@/static/favicon.svg')",
                 'image-dark-logo': "url('@/static/dark-favicon.svg')",
                 'image-night-mode': "url('@/static/night-mode.svg')"
