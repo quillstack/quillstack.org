@@ -32,6 +32,18 @@
                         <a href="#" v-scroll-to="'#usage'">
                             Usage
                         </a>
+                        <ol>
+                            <li>
+                                <a href="#" v-scroll-to="'#required-keys'">
+                                    Required keys
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" v-scroll-to="'#multi-line'">
+                                    Multi-line values
+                                </a>
+                            </li>
+                        </ol>
                     </li>
                 </ul>
             </div>
@@ -93,6 +105,33 @@
             </p>
         </div>
         <code-php :lines="debugDefault"/>
+        <div class="center">
+            <h3 id="required-keys">
+                Required keys
+                <a class="anchor" href="#" v-scroll-to="'#required-keys'">¶</a>
+            </h3>
+            <p class="before-code">
+                You can use another helper method for required keys. If required key is not found an exception will be thrown:
+            </p>
+        </div>
+        <code-php :lines="required"/>
+        <div class="center">
+            <p class="before-code">
+                The result if the key DATABASE_HOST is not set in the .env file:
+            </p>
+        </div>
+        <code-php :colors="false" :lines="requiredException"/>
+        <div class="center">
+            <h3 id="multi-line">
+                Multi-line values
+                <a class="anchor" href="#" v-scroll-to="'#multi-line'">¶</a>
+            </h3>
+            <p class="before-code">
+                You can define multi-line values in your .env file by using \n separator instead of new lines for example:
+            </p>
+        </div>
+        <code-php :colors="false" :lines="multiLine"/>
+
         <page-footer photo-by-name="Claire Brear" photo-by-url="https://unsplash.com/@_bearista1"/>
     </main>
 </template>
@@ -127,6 +166,16 @@ export default {
                 "if (env('APP_DEBUG', false)) {",
                 "    echo 'Debug mode';",
                 "}",
+            ],
+            required: [
+                "$dbHost = required('DATABASE_HOST');",
+            ],
+            requiredException: [
+                "DotenvValueNotSetException:",
+                "Value not set for key: DATABASE_HOST",
+            ],
+            multiLine: [
+                "PRIVATE_KEY=\"line1\\nline2\\nline3\"",
             ]
         }
     }
