@@ -149,7 +149,7 @@ export default {
                 "use Quillstack\\LocalStorage\\LocalStorage;",
                 "",
                 "$storage = new LocalStorage();",
-                "$storage->save('var/cache/token.txt', 'muHaloosPps23sKkdsaaBBcei);",
+                "$storage->save('var/cache/token.txt', 'muHaloosPps23sKkdsaaBBcei');",
             ],
             dependencyUsage: [
                 "use Quillstack\\LocalStorage\\LocalStorage;",
