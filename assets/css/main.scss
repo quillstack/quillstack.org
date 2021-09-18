@@ -3,7 +3,7 @@
     src: url("@/assets/fonts/proxima-nova-normal-700.woff2") format("woff2"),
     url("@/assets/fonts/proxima-nova-normal-700.woff") format("woff"),
     url("@/assets/fonts/proxima-nova-normal-700.otf") format("opentype");
-    font-display: auto;
+    font-display: swap;
     font-style: normal;
     font-weight:700;
 }
@@ -13,7 +13,7 @@
     src: url("@/assets/fonts/proxima-nova-normal-400.woff2") format("woff2"),
     url("@/assets/fonts/proxima-nova-normal-400.woff") format("woff"),
     url("@/assets/fonts/proxima-nova-normal-400.otf") format("opentype");
-    font-display: auto;
+    font-display: swap;
     font-style: normal;
     font-weight: 700;
 }
@@ -23,7 +23,7 @@
     src: url("@/assets/fonts/verdigris-mvb-pro-big.woff2") format("woff2"),
     url("@/assets/fonts/verdigris-mvb-pro-big.woff") format("woff"),
     url("@/assets/fonts/verdigris-mvb-pro-big.otf") format("opentype");
-    font-display: auto;
+    font-display: swap;
     font-style: normal;
     font-weight: 400;
 }
@@ -34,6 +34,8 @@
     url("@/assets/fonts/SourceCodePro-Regular.woff") format("woff"),
     url("@/assets/fonts/SourceCodePro-Regular.otf") format("opentype");
     font-display: swap;
+    font-style: normal;
+    font-weight: 400;
 }
 
 body {
