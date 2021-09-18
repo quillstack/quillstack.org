@@ -157,6 +157,10 @@ body {
         @apply px-0 py-0;
     }
 
+    span.code {
+        font-family: "Source Code Pro", monospace;
+    }
+
     div.code ul li {
         @apply whitespace-nowrap;
         font-family: "Source Code Pro", monospace;

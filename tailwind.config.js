@@ -11,7 +11,8 @@ module.exports = {
             backgroundImage: {
                 'image-di': "url('@/assets/images/di.jpg')",
                 'image-index': "url('@/assets/images/index.jpg')",
-                'image-dotenv': "url('@/assets/images/dotenv.jpg')"
+                'image-dotenv': "url('@/assets/images/dotenv.jpg')",
+                'image-storage': "url('@/assets/images/storage.jpg')"
             }
         },
     },

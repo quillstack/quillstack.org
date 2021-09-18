@@ -43,6 +43,10 @@ export default {
                 'use',
                 'if',
                 'echo',
+                'public',
+                'function',
+                'private',
+                'protected',
             ],
             const: [
                 '__DIR__',
