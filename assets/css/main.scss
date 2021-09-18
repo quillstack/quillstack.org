@@ -103,6 +103,7 @@ body {
     }
 
     .intro {
+        backdrop-filter: blur(8px);
         @apply md:rounded pt-6 pb-2 px-4 md:px-8 shadow border-t border-b md:border;
         @apply dark:border-gray-900 border-gray-100 bg-transparent dark:bg-dark-transparent;
 
