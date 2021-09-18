@@ -145,6 +145,12 @@ export default {
             }
         }
     },
+    mounted () {
+        const self = this
+        window.onNuxtReady(() => {
+            console.log(self.darkMode)
+        })
+    },
     computed: {
         darkMode () {
             return this.$store.state.mode.dark;
