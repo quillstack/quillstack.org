@@ -148,7 +148,9 @@ export default {
     mounted () {
         const self = this
         window.onNuxtReady(() => {
-            console.log(self.darkMode)
+            if (self.darkMode) {
+                document.documentElement.classList.add('dark');
+            }
         })
     },
     computed: {
