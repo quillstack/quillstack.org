@@ -1,9 +1,9 @@
 <template>
     <main>
         <logo/>
-        <div class="bg-image-di hero">
+        <div class="bg-image-di dark:bg-image-dark-di hero bg-center">
             <div class="center">
-                <h1 class="bg-pink-900">
+                <h1 class="dark:bg-pink-900 bg-green-500">
                     Dependency Injection Container
                 </h1>
 
@@ -254,7 +254,7 @@
             </p>
         </div>
         <code-php :lines="objects"/>
-        <page-footer photo-by-name="Hossein Hosseini" photo-by-url="https://unsplash.com/@hosseiin"/>
+        <page-footer :photo-by-name="photoName" :photo-by-url="photoUrl"/>
     </main>
 </template>
 
@@ -264,8 +264,24 @@ import CodePhp from "../components/CodePhp";
 import PageFooter from "../components/PageFooter";
 export default {
     components: {PageFooter, CodePhp, Logo},
-    head: {
-        title: 'Dependency Injection - Quillstack'
+    head() {
+        return {
+            title: 'Dependency Injection - Quillstack',
+            htmlAttrs: {
+                class: this.darkMode ? 'dark' : ''
+            }
+        }
+    },
+    computed: {
+        darkMode () {
+            return this.$store.state.mode.dark;
+        },
+        photoUrl () {
+            return this.darkMode ? "https://unsplash.com/@hosseiin" : "https://unsplash.com/@amyjoyhumphries";
+        },
+        photoName () {
+            return this.darkMode ? "Hossein Hosseini" : "Amy Humphries";
+        }
     },
     data() {
         return {

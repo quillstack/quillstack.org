@@ -142,8 +142,13 @@ import CodePhp from "../components/CodePhp";
 import PageFooter from "../components/PageFooter";
 export default {
     components: {PageFooter, CodePhp, Logo},
-    head: {
-        title: 'Dotenv - Quillstack'
+    head() {
+        return {
+            title: 'Dotenv - Quillstack',
+            htmlAttrs: {
+                class: this.$store.state.mode.dark ? 'dark' : ''
+            }
+        }
     },
     data() {
         return {

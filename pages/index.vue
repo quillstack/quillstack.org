@@ -1,9 +1,9 @@
 <template>
     <main>
         <logo/>
-        <div class="bg-image-index hero">
+        <div class="bg-image-index dark:bg-image-dark-index hero bg-center">
             <div class="center">
-                <h1 class="bg-green-800">
+                <h1 class="dark:bg-green-800 bg-red-300">
                     The API Framework
                 </h1>
 
@@ -25,14 +25,40 @@
                 </ul>
             </div>
         </div>
-        <page-footer photo-by-url="https://unsplash.com/@sseeker" photo-by-name="Stormseeker"/>
+        <page-footer :photo-by-url="photoUrl" :photo-by-name="photoName"/>
     </main>
 </template>
 
 <script>
 import Logo from "../components/Logo";
 import PageFooter from "../components/PageFooter";
+
 export default {
-    components: {PageFooter, Logo}
+    components: {PageFooter, Logo},
+    head() {
+        return {
+            htmlAttrs: {
+                class: this.darkMode ? 'dark' : ''
+            },
+            link: [
+                {
+                    rel: 'icon',
+                    type: 'image/x-icon',
+                    href: this.darkMode ? '/dark-favicon.svg' : '/favicon.svg'
+                },
+            ]
+        }
+    },
+    computed: {
+        darkMode () {
+            return this.$store.state.mode.dark;
+        },
+        photoUrl () {
+            return this.darkMode ? "https://unsplash.com/@sseeker" : "https://unsplash.com/@lauraadaiphoto";
+        },
+        photoName () {
+            return this.darkMode ? "Stormseeker" : "laura adai";
+        }
+    }
 }
 </script>

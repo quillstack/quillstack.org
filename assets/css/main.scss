@@ -37,20 +37,22 @@
 }
 
 body {
-    @apply bg-black text-gray-200;
+    @apply bg-white text-gray-800;
+    @apply dark:bg-black dark:text-gray-200;
 
     main {
-        @apply bg-gray-900;
+        @apply bg-gray-100;
+        @apply dark:bg-gray-900;
     }
 
     .center {
         @apply mx-auto xl:w-1/2 lg:w-1/2 md:w-2/3;
 
         a {
-            @apply border-b border-dashed text-blue-300;
+            @apply dark:text-blue-300 text-blue-600;
 
             &:hover {
-                @apply border-solid border-blue-400;
+                @apply border-b border-solid dark:border-blue-400 border-blue-600;
             }
 
             &.anchor {
@@ -71,43 +73,46 @@ body {
 
     h2 {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-gray-300 text-4xl mb-2 pt-8 pb-1 px-4 md:px-0;
+        @apply dark:text-gray-300 text-gray-600 text-4xl mb-2 pt-8 pb-1 px-4 md:px-0;
     }
 
     h3 {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-gray-400 text-3xl mb-2 pt-10 pb-1 px-4 md:px-0;
+        @apply dark:text-gray-400 text-gray-500 text-3xl mb-2 pt-10 pb-1 px-4 md:px-0;
     }
 
     footer {
-        @apply bg-black border-t border-gray-800 mt-20 text-center text-gray-600 py-6;
+        @apply border-t mt-20 text-center py-6 bg-white border-gray-200 text-gray-400;
+        @apply dark:bg-black dark:border-gray-800 dark:text-gray-600;
     }
 
     .logo {
-        @apply flex py-3 px-5 bg-black shadow-lg border-b border-gray-800;
+        @apply flex py-3 pl-5 pr-20 shadow-lg border-b bg-white border-gray-200;
+        @apply dark:bg-black dark:border-gray-800;
     }
 
     .quillstack {
         font-family: verdigris-mvb-pro-big, serif;
-        @apply text-2xl font-thin pt-1 pl-2 text-gray-400;
+        @apply text-2xl font-thin pt-1 pl-2 text-gray-800;
+        @apply dark:text-gray-400;
     }
 
     .intro {
-        background: rgba(0, 0, 0, 0.5);
-        @apply md:rounded pt-6 pb-2 px-4 md:px-8 shadow border-t border-b md:border border-gray-900;
+        @apply md:rounded pt-6 pb-2 px-4 md:px-8 shadow border-t border-b md:border;
+        @apply dark:border-gray-900 border-gray-100 bg-transparent dark:bg-dark-transparent;
 
         p {
             font-family: verdigris-mvb-pro-big, serif;
-            @apply text-gray-200 text-xl italic leading-8 drop-shadow-sm;
+            @apply dark:text-gray-200 text-gray-800 text-xl italic leading-8 drop-shadow-sm;
         }
     }
 
     hr {
-        @apply border-dashed mt-6 mb-4 border-gray-600;
+        @apply border-dashed mt-6 mb-4 dark:border-gray-600 border-gray-400;
     }
 
     p {
-        @apply text-gray-400 text-lg pl-4 pr-2 md:px-0 pb-5;
+        @apply dark:text-gray-400 text-gray-600 text-lg pl-4 pr-2 md:px-0 pb-5;
         font-family: proxima-nova,sans-serif;
 
         &.before-code {
@@ -116,12 +121,20 @@ body {
     }
 
     li {
-        @apply text-gray-400 text-lg;
+        @apply text-lg;
         font-family: proxima-nova,sans-serif;
     }
 
+    .code {
+        li {
+            @apply dark:text-gray-400 text-gray-200;
+        }
+    }
+
     .toc {
-        @apply md:mt-5 mb-5 p-5 bg-gray-800 md:rounded border-gray-700 border-dashed md:border border-t border-b;
+        @apply md:mt-5 mb-5 p-5 md:rounded border-dashed md:border border-t border-b;
+        @apply bg-gray-200 border-gray-300;
+        @apply dark:bg-gray-800 dark:border-gray-700;
     }
 
     div.list {
@@ -195,6 +208,12 @@ body {
     }
 
     div.hero {
-        @apply bg-black pt-10 pb-10 h-auto bg-cover shadow md:mb-4 md:border-b md:border-gray-800;
+        @apply bg-gray-100 dark:bg-black pt-10 pb-10 h-auto bg-cover shadow md:mb-4 md:border-b md:dark:border-gray-800 md:border-gray-400;
+    }
+
+    .switch {
+        @apply shadow mt-4 mr-5 pt-[3px] p-1 absolute top-0 right-0 rounded border cursor-pointer w-[30px] h-[30px] text-center;
+        @apply bg-gray-600 border-gray-700;
+        @apply dark:bg-gray-800 border-gray-600;
     }
 }

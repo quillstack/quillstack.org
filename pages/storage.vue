@@ -137,8 +137,13 @@ import CodePhp from "../components/CodePhp";
 import PageFooter from "../components/PageFooter";
 export default {
     components: {PageFooter, CodePhp, Logo},
-    head: {
-        title: 'Storage - Quillstack'
+    head() {
+        return {
+            title: 'Storage - Quillstack',
+            htmlAttrs: {
+                class: this.$store.state.mode.dark ? 'dark' : ''
+            }
+        }
     },
     data() {
         return {
