@@ -1,17 +1,19 @@
 <template>
     <headroom>
-        <nuxt-link to="/" class="logo" id="logo">
-            <div class="center flex">
-                <div class="bg-image-logo dark:bg-image-dark-logo bg-no-repeat bg-center w-[30px] block"
-                     width="30px"
-                     height="30px">
+        <div class="logo-bg">
+            <nuxt-link to="/" class="logo" id="logo">
+                <div class="center flex">
+                    <div class="bg-image-logo dark:bg-image-dark-logo bg-no-repeat bg-center w-[30px] block"
+                         width="30px"
+                         height="30px">
+                    </div>
+                    <div class="quillstack">Quillstack</div>
                 </div>
-                <div class="quillstack">Quillstack</div>
+            </nuxt-link>
+            <div class="switch" @click="toggle()">
+                <span v-if="mode">☀️</span>
+                <span v-else>🌙️</span>
             </div>
-        </nuxt-link>
-        <div class="switch" @click="toggle()">
-            <span v-if="mode">☀️</span>
-            <span v-else>🌙️</span>
         </div>
     </headroom>
 </template>

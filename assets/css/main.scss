@@ -86,9 +86,12 @@ body {
         @apply dark:bg-black dark:border-gray-800 dark:text-gray-600;
     }
 
+    .logo-bg {
+        @apply dark:bg-black dark:border-gray-800 shadow-lg border-b bg-white border-gray-200;
+    }
+
     .logo {
-        @apply flex py-3 pl-5 pr-20 shadow-lg border-b bg-white border-gray-200;
-        @apply dark:bg-black dark:border-gray-800;
+        @apply flex py-3 pl-5 pr-20 mr-20;
     }
 
     .quillstack {
