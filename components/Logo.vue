@@ -11,8 +11,8 @@
                 </div>
             </nuxt-link>
             <div class="switch select-none" @click="switchColor()">
-                <span v-if="darkMode">☀️</span>
-                <span v-else>🌙️</span>
+                <div v-if="darkMode" class="text-white"><IconLight width="16px" height="16px"/>️</div>
+                <div v-else class="text-gray-100"><IconDark width="16px" height="16px"/></div>
             </div>
         </div>
     </headroom>
@@ -20,11 +20,15 @@
 
 <script>
 import { headroom } from 'vue-headroom';
+import IconLight from '@/assets/icons/light.svg?inline';
+import IconDark from '@/assets/icons/dark.svg?inline';
 
 export default {
     name: "Logo",
     components: {
-        headroom
+        headroom,
+        IconLight,
+        IconDark,
     },
     methods: {
         switchColor () {

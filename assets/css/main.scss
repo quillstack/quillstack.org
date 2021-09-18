@@ -217,7 +217,7 @@ body {
     }
 
     .switch {
-        @apply shadow mt-4 mr-5 pt-[3px] p-1 absolute top-0 right-0 rounded border cursor-pointer w-[30px] h-[30px] text-center;
+        @apply shadow mt-4 mr-5 pt-[5px] p-[7px] absolute top-0 right-0 rounded border cursor-pointer w-[30px] h-[30px] text-center;
         @apply bg-gray-600 border-gray-700;
         @apply dark:bg-gray-800 border-gray-600;
     }
