@@ -127,7 +127,7 @@
         </div>
         <code-php :lines="dependencyUsage"/>
 
-        <page-footer photo-by-name="Evgeni Evgeniev" photo-by-url="https://unsplash.com/@evgenievgenief"/>
+        <page-footer :photo-by-name="photoName" :photo-by-url="photoUrl"/>
     </main>
 </template>
 
@@ -141,8 +141,19 @@ export default {
         return {
             title: 'Storage - Quillstack',
             htmlAttrs: {
-                class: this.$store.state.mode.dark ? 'dark' : ''
+                class: this.darkMode ? 'dark' : ''
             }
+        }
+    },
+    computed: {
+        darkMode () {
+            return this.$store.state.mode.dark;
+        },
+        photoUrl () {
+            return this.darkMode ? "https://unsplash.com/@evgenievgenief" : "https://unsplash.com/@_ananas_";
+        },
+        photoName () {
+            return this.darkMode ? "Evgeni Evgeniev" : "Mathieu Perrier";
         }
     },
     data() {
