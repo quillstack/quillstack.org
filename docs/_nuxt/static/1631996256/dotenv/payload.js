@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/dotenv", {data:[{}],fetch:{},mutations:void 0});
