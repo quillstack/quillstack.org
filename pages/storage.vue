@@ -142,7 +142,14 @@ export default {
             title: 'Storage - Quillstack',
             htmlAttrs: {
                 class: this.darkMode ? 'dark' : ''
-            }
+            },
+            link: [
+                {
+                    rel: 'icon',
+                    type: 'image/x-icon',
+                    href: this.darkMode ? '/dark-favicon.svg' : '/favicon.svg'
+                },
+            ]
         }
     },
     mounted () {
