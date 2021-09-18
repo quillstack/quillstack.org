@@ -10,8 +10,8 @@
                     <div class="quillstack">Quillstack</div>
                 </div>
             </nuxt-link>
-            <div class="switch" @click="toggle()">
-                <span v-if="mode">☀️</span>
+            <div class="switch select-none" @click="switchColor()">
+                <span v-if="darkMode">☀️</span>
                 <span v-else>🌙️</span>
             </div>
         </div>
@@ -20,7 +20,6 @@
 
 <script>
 import { headroom } from 'vue-headroom';
-import { mapMutations } from 'vuex';
 
 export default {
     name: "Logo",
@@ -28,13 +27,13 @@ export default {
         headroom
     },
     methods: {
-        ...mapMutations({
-            toggle: 'mode/toggle'
-        })
+        switchColor () {
+            this.$colorMode.preference = this.darkMode ? 'light' : 'dark';
+        }
     },
     computed: {
-        mode () {
-            return this.$store.state.mode.dark;
+        darkMode () {
+            return this.$colorMode.preference === 'dark';
         }
     }
 }

@@ -37,9 +37,6 @@ export default {
     components: {PageFooter, Logo},
     head() {
         return {
-            htmlAttrs: {
-                class: this.darkMode ? 'dark' : ''
-            },
             link: [
                 {
                     rel: 'icon',
@@ -49,17 +46,9 @@ export default {
             ]
         }
     },
-    mounted () {
-        const self = this
-        window.onNuxtReady(() => {
-            if (self.darkMode) {
-                document.documentElement.classList.add('dark');
-            }
-        })
-    },
     computed: {
         darkMode () {
-            return this.$store.state.mode.dark;
+            return this.$colorMode.preference === 'dark';
         },
         photoUrl () {
             return this.darkMode ? "https://unsplash.com/@sseeker" : "https://unsplash.com/@lauraadaiphoto";
