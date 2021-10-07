@@ -22,6 +22,7 @@
                     <li><nuxt-link to="/di/">Dependency Injection Container</nuxt-link></li>
                     <li><nuxt-link to="/dotenv/">Dotenv</nuxt-link></li>
                     <li><nuxt-link to="/storage/">Storage</nuxt-link></li>
+                    <li><nuxt-link to="/headers/">Headers</nuxt-link></li>
                 </ul>
             </div>
         </div>

@@ -15,6 +15,8 @@ module.exports = {
             backgroundImage: {
                 'image-di': "url('@/assets/images/di.jpg')",
                 'image-dark-di': "url('@/assets/images/dark-di.jpg')",
+                'image-headers': "url('@/assets/images/headers.jpg')",
+                'image-dark-headers': "url('@/assets/images/dark-headers.jpg')",
                 'image-index': "url('@/assets/images/index.jpg')",
                 'image-dark-index': "url('@/assets/images/dark-index.jpg')",
                 'image-dotenv': "url('@/assets/images/dotenv.jpg')",
